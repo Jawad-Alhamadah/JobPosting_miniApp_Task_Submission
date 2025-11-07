@@ -1,0 +1,61 @@
+[
+  { "id": "dumracuxpy1l6k72ro", "title": "Software Engineer", "company": "ByteForge Technologies", "location": "usa, san francisco", "salary": 128000, "src": "/logos/company_1.svg", "postDate": "11/14/2023", "description": "Design and build scalable software systems, collaborate with cross-functional teams, and contribute to high-impact backend and frontend features." },
+  
+  { "id": "bm3z05k0d61gxv1px9", "title": "Data Analyst", "company": "InsightWorks", "location": "uk, london", "salary": 84000, "src": "/logos/company_2.svg", "postDate": "08/03/2022", "description": "Analyze datasets, generate insights, build dashboards, and support data-driven decisions across business units." },
+  
+  { "id": "nwbq3bhcwyat8a7ypa", "title": "UX Designer", "company": "PixelPath Studio", "location": "canada, vancouver", "salary": 97500, "src": "/logos/company_3.svg", "postDate": "01/27/2024", "description": "Create intuitive user experiences, conduct user research, and lead UI/UX design from concept to final product handoff." },
+  
+  { "id": "kuvkddgfdr7v42z36s", "title": "Frontend Developer", "company": "NovaSoft Labs", "location": "usa, new york", "salary": 115000, "src": "/logos/company_4.svg", "postDate": "03/11/2021", "description": "Develop responsive interfaces using modern JavaScript frameworks, optimize UX performance, and maintain component libraries." },
+  
+  { "id": "qfhvvgxwcl92llppb1", "title": "Backend Engineer", "company": "CloudThread Inc.", "location": "australia, sydney", "salary": 123000, "src": "/logos/company_5.svg", "postDate": "10/19/2025", "description": "Build and maintain robust backend services, improve API reliability, and work on high-scale cloud infrastructure." },
+  
+  { "id": "ck3c3jnsslgme6c8n1", "title": "DevOps Engineer", "company": "Skyline Systems", "location": "germany, berlin", "salary": 119000, "src": "/logos/company_6.svg", "postDate": "07/04/2024", "description": "Automate CI/CD pipelines, enhance deployment workflows, and ensure secure, stable production environments." },
+  
+  { "id": "5w40fqxextrsbdksxq", "title": "Machine Learning Engineer", "company": "NeuraTech AI", "location": "saudi arabia, riyadh", "salary": 142000, "src": "/logos/company_7.svg", "postDate": "04/29/2021", "description": "Build machine learning models, optimize training pipelines, and deploy real-time inference systems for AI-driven products." },
+  
+  { "id": "xugkw8efwhyhd71yrr", "title": "Full Stack Developer", "company": "CoreBit Solutions", "location": "usa, austin", "salary": 108000, "src": "/logos/company_8.svg", "postDate": "11/6/2025", "description": "Develop full-stack web applications, integrate APIs, and collaborate on both client-side and server-side features." },
+  
+  { "id": "bhapu6uufuqto1p1jy", "title": "Product Manager", "company": "Horizon Digital", "location": "germany, berlin", "salary": 131000, "src": "/logos/company_9.svg", "postDate": "12/07/2023", "description": "Define product roadmaps, lead feature planning, align teams on priorities, and drive execution across development cycles." },
+  
+  { "id": "w34ywy1ueael5s387c", "title": "QA Automation Engineer", "company": "Testify Labs", "location": "usa, raleigh", "salary": 96000, "src": "/logos/company_10.svg", "postDate": "01/03/2025", "description": "Create automated test suites, improve testing frameworks, and ensure product stability through continuous validation." },
+  
+  { "id": "ho1o1sjn1u6lljlu1m", "title": "IT Support Specialist", "company": "TechPulse Co.", "location": "saudi arabia, riyadh", "salary": 67000, "src": "/logos/company_11.svg", "postDate": "02/21/2023", "description": "Provide technical support, troubleshoot hardware and software issues, and assist users with system configurations." },
+  
+  { "id": "xo5kmdnkyx7p5dnjd2", "title": "Cybersecurity Analyst", "company": "SafeNet Group", "location": "uae, dubai", "salary": 102000, "src": "/logos/company_12.svg", "postDate": "06/12/2024", "description": "Monitor security systems, investigate threats, strengthen defenses, and support incident response operations." },
+  
+  { "id": "eg1y8j2xk6yxmfn3eo", "title": "Cloud Architect", "company": "OrbitCloud Services", "location": "usa, san jose", "salary": 155000, "src": "/logos/company_13.svg", "postDate": "03/28/2022", "description": "Design large-scale cloud architectures, optimize infrastructure performance, and guide cloud adoption strategies." },
+  
+  { "id": "ocu5irkex8fsgytiey", "title": "Database Administrator", "company": "DataCore Solutions", "location": "india, bangalore", "salary": 101000, "src": "/logos/company_14.svg", "postDate": "10/10/2021", "description": "Manage databases, ensure high availability, optimize queries, and maintain data security and integrity." },
+  
+  { "id": "z6wl29511qdqrcc89f", "title": "Systems Engineer", "company": "Quantum Network Systems", "location": "canada, toronto", "salary": 110000, "src": "/logos/company_15.svg", "postDate": "05/25/2025", "description": "Maintain system infrastructure, configure networks, and ensure reliable operation of enterprise-level systems." },
+  
+  { "id": "7g187b5dyxmbg323ir", "title": "AI Research Scientist", "company": "DeepCore Labs", "location": "saudi arabia, riyadh", "salary": 165000, "src": "/logos/company_16.svg", "postDate": "11/18/2022", "description": "Research advanced AI models, experiment with new algorithms, and support long-term innovation initiatives." },
+  
+  { "id": "nfbtsjb3xfw13cvklm", "title": "Mobile App Developer", "company": "AppVision Technologies", "location": "japan, tokyo", "salary": 99000, "src": "/logos/company_17.svg", "postDate": "08/09/2023", "description": "Develop iOS and Android applications, improve mobile performance, and implement modern UI components." },
+  
+  { "id": "xuzjbajhuiuth9sfye", "title": "Business Intelligence Analyst", "company": "InsightEdge Corp.", "location": "usa, houston", "salary": 93000, "src": "/logos/company_18.svg", "postDate": "04/15/2024", "description": "Build BI reports, analyze business trends, and support strategic decisions using data-driven insights." },
+  
+  { "id": "gio3kyrnkp9t7htk9v", "title": "IT Project Manager", "company": "NextPhase Solutions", "location": "france, paris", "salary": 124000, "src": "/logos/company_19.svg", "postDate": "01/21/2021", "description": "Lead technical projects, coordinate teams, manage timelines, and ensure successful delivery of IT initiatives." },
+  
+  { "id": "pcobq4d04uywcjn161", "title": "Network Administrator", "company": "DataLink Systems", "location": "uk, london", "salary": 87000, "src": "/logos/company_20.svg", "postDate": "09/02/2024", "description": "Maintain network systems, troubleshoot connectivity issues, and ensure reliable communication infrastructure." },
+  
+  { "id": "4nh8zoyn3sfmwf5uj9", "title": "Technical Writer", "company": "DocuVerse Media", "location": "philippines, manila", "salary": 76000, "src": "/logos/company_21.svg", "postDate": "12/30/2023", "description": "Write clear documentation, produce technical guides, and translate complex topics into user-friendly content." },
+  
+  { "id": "uzz3blxkh72t0wbh94", "title": "Game Developer", "company": "PixelRift Studios", "location": "usa, san diego", "salary": 107000, "src": "/logos/company_22.svg", "postDate": "02/09/2022", "description": "Develop gameplay features, optimize performance, and collaborate with artists and designers on game systems." },
+  
+  { "id": "rbhkxbzlh87qjrly9e", "title": "Hardware Engineer", "company": "SiliconAxis", "location": "usa, san jose", "salary": 128000, "src": "/logos/company_23.svg", "postDate": "06/27/2025", "description": "Design electronic components, test hardware prototypes, and improve device performance and reliability." },
+  
+  { "id": "pgtbxan9xoefvty743", "title": "Data Engineer", "company": "StreamLogic", "location": "uae, dubai", "salary": 118000, "src": "/logos/company_24.svg", "postDate": "07/15/2021", "description": "Build data pipelines, manage ETL workflows, and ensure data availability for analytics platforms." },
+  
+  { "id": "tphbl1c4n68uerjlkt", "title": "Security Engineer", "company": "CipherNet Defense", "location": "canada, toronto", "salary": 134000, "src": "/logos/company_25.svg", "postDate": "10/05/2022", "description": "Strengthen system security, assess vulnerabilities, and implement safeguards against cyber threats." },
+  
+  { "id": "7he6g0br49z5ftl5dr", "title": "UI Engineer", "company": "DesignLayer Studios", "location": "germany, berlin", "salary": 103000, "src": "/logos/company_26.svg", "postDate": "03/17/2024", "description": "Build high-quality UI components, improve user experiences, and collaborate with designers on polished interfaces." },
+  
+  { "id": "lmf2vepkjek7tpo10c", "title": "Cloud Support Engineer", "company": "Nimbus Technologies", "location": "australia, melbourne", "salary": 97000, "src": "/logos/company_27.svg", "postDate": "12/01/2021", "description": "Support cloud platform users, troubleshoot deployment issues, and maintain cloud service reliability." },
+  
+  { "id": "69ingv3fh7dirclwez", "title": "Data Scientist", "company": "PredictivePulse", "location": "usa, new york", "salary": 146000, "src": "/logos/company_28.svg", "postDate": "08/22/2025", "description": "Build predictive models, analyze data trends, and create actionable insights for business initiatives." },
+  
+  { "id": "c5j5xl7vfu8qiyt4ov", "title": "Site Reliability Engineer", "company": "StackEdge Systems", "location": "usa, san francisco", "salary": 138000, "src": "/logos/company_29.svg", "postDate": "04/03/2022", "description": "Improve system uptime, automate reliability tools, and ensure highly available production environments." },
+  
+  { "id": "k61ewb38dz1ayjfgos", "title": "Software Tester", "company": "BugCatcher QA", "location": "saudi arabia, riyadh", "salary": 82000, "src": "/logos/company_30.svg", "postDate": "05/11/2023", "description": "Test software functionality, identify defects, write test cases, and verify product quality before release." }
+]
