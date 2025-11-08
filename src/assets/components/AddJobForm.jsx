@@ -67,12 +67,12 @@ function AddJobForm(props) {
 
                 </div>
 
-                <div className='z-10 bg-white w-[60%]  fixed left-[20%] top-[5%]  rounded-md '>
+                <div className='z-10 bg-white w-[80%]  fixed left-[10%] top-[5%]  rounded-md '>
                     <div className='text-center text-pink-800 text-lg '>
                         <div className='flex justify-between'>
                             <GiArtificialHive className='text-pink-800 size-10 p-1' />
                             <RxCross2 className='mt-1 text-red-600' onClick={() => formContext.setIsDisplayAddForm(false)}></RxCross2>
-                            </div>
+                        </div>
 
                         Post Job Form
 
@@ -172,6 +172,16 @@ function AddJobForm(props) {
 
             </div>
             <div className='z-10 bg-white w-[40%]  fixed left-[30%] top-[5%]  rounded-md '>
+                <div className='text-center text-pink-800 text-lg '>
+                    <div className='flex justify-between'>
+                        <GiArtificialHive className='text-pink-800 size-10 p-1' />
+                        <RxCross2 className='mt-1 text-red-600' onClick={() => formContext.setIsDisplayAddForm(false)}></RxCross2>
+                    </div>
+
+                    Post Job Form
+
+                </div>
+
                 <form className='grid gap-2 p-3'>
                     <div className='flex justify-between items-center'>
                         <label className="font-medium text-[0.9em]">Title</label>
