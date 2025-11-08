@@ -3,21 +3,24 @@ import { HiOutlineSearch } from "react-icons/hi";
 import { GrLocation } from "react-icons/gr";
 import { VscClose } from "react-icons/vsc";
 import SearchFilters from './SearchFilters';
+import { ScreenWidthContext } from './ScreenWidthContext';
 function SearchBar(props) {
     let [searchInputValue, setSearchInputValue] = React.useState("")
     let [location, setLocation] = React.useState("")
     const minMaxRef = React.useRef(null);
 
+    const width = React.useContext(ScreenWidthContext);
 
-    React.useEffect(() => filterBySearchValue(searchInputValue, location, 0, 0), [searchInputValue, location, minMaxRef])
+    React.useEffect(() => filterBySearchValue(searchInputValue, location, 0, 0),
+        [searchInputValue, location, minMaxRef])
 
 
     function filterBySearchValue(searchString, location, min, max) {
 
-
         fetch("/data/mockData.json")
             .then(res => res.json())
             .then(data => {
+                //if No filter is applied, return all.
                 if (!searchString && !location && !min && !max) return props.setJobData(data)
 
                 let filteredJobs = data
@@ -53,8 +56,6 @@ function SearchBar(props) {
 
     }
 
-
-
     function onChangeSearch(e) {
         setSearchInputValue(e.target.value)
     }
@@ -76,37 +77,80 @@ function SearchBar(props) {
     function getMinMax(minMax) {
         minMaxRef.current = minMax
     }
-    return (
-        <div>
-            <div className='w-full bg-white p-2 flex space-x-4'>
 
-                <div className=' flex w-[50%] rounded-l-3xl outline bg-black'>
-                    <button className=' text-white p-1'>
-                        <HiOutlineSearch className='size-5 '
-                            onClick={() => search(searchInputValue, location)}
-                        />
-                    </button>
-                    <input placeholder="search" onChange={onChangeSearch} value={searchInputValue} className='pl-1  bg-white w-[90%]'>
+    // Mobile
+    if (width < 800) {
+        return (
+            <div>
+                <div className='w-full bg-white p-2 flex space-x-4'>
 
-                    </input>
-                    <VscClose onClick={() => setSearchInputValue("")} className='bg-white h-full' />
+                    <div className=' flex w-[50%] rounded-l-3xl outline bg-black'>
+                        <button className=' text-white p-1'>
+                            <HiOutlineSearch className='size-5 '
+                                onClick={() => search(searchInputValue, location)}
+                            />
+                        </button>
+                        <input placeholder="search" onChange={onChangeSearch} value={searchInputValue} className='pl-1  bg-white w-[90%]'>
+
+                        </input>
+                        <VscClose onClick={() => setSearchInputValue("")} className='bg-white h-full' />
+                    </div>
+                    <div className=' flex w-[50%] rounded-l-3xl outline bg-black'>
+                        <button className=' text-white p-1'>
+                            <GrLocation className='size-5 '
+                                onClick={() => search(searchInputValue, location)}
+                            />
+
+                        </button>
+                        <input placeholder="location" onChange={onChangeLocation} value={location} className='pl-1  bg-white  w-[90%]'></input>
+                        <VscClose onClick={() => setLocation("")} className='bg-white h-full' />
+                    </div>
+
                 </div>
-                <div className=' flex w-[50%] rounded-l-3xl outline bg-black'>
-                    <button className=' text-white p-1'>
-                        <GrLocation className='size-5 '
-                            onClick={() => search(searchInputValue, location)}
-                        />
+                <SearchFilters getMinMax={getMinMax}></SearchFilters>
 
-                    </button>
-                    <input placeholder="location" onChange={onChangeLocation} value={location} className='pl-1  bg-white  w-[90%]'></input>
-                    <VscClose onClick={() => setLocation("")} className='bg-white h-full' />
+            </div>
+        )
+    }
+    //Desktop
+
+    return (
+        <div >
+            <div className='w-full p-2 grid justify-start  space-x-4 '>
+
+                <div className=' bg-white p-2 rounded-lg ring-1 ring-pink-800'>
+
+                    <SearchFilters getMinMax={getMinMax}></SearchFilters>
+
+                    <div >
+                        <div className=' flex w-full rounded-l-3xl outline bg-black'>
+                            <button className=' text-white p-1'>
+                                <HiOutlineSearch className='size-5 '
+                                    onClick={() => search(searchInputValue, location)}
+                                />
+                            </button>
+                            <input placeholder="search" onChange={onChangeSearch} value={searchInputValue} className='pl-1  bg-white w-[90%]'>
+
+                            </input>
+                            <VscClose onClick={() => setSearchInputValue("")} className='bg-white size-4 h-auto' />
+                        </div>
+                        <div className=' flex w-full rounded-l-3xl outline bg-black mt-1 '>
+                            <button className=' text-white p-1'>
+                                <GrLocation className='size-5 '
+                                    onClick={() => search(searchInputValue, location)}
+                                />
+
+                            </button>
+                            <input placeholder="location" onChange={onChangeLocation} value={location} className='pl-1  bg-white  w-[90%]'></input>
+                            <VscClose onClick={() => setLocation("")} className='bg-white size-4 h-auto' />
+                        </div>
+                    </div>
                 </div>
 
             </div>
-            <SearchFilters getMinMax={getMinMax}></SearchFilters>
-            {/* <button onClick={()=>console.log(minMaxRef.current())}>check minmax </button> */}
         </div>
     )
+
 }
 
 export default SearchBar

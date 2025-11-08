@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './stylingModules/JobCard.module.css';
 import { BsBriefcaseFill } from "react-icons/bs";
 import { BsCash } from "react-icons/bs";
 import { MdOutlineAttachMoney } from "react-icons/md";
@@ -24,7 +23,7 @@ let navigate = useNavigate();
 
   }
   return (
-    <div onClick={()=>{navigate(`/job/${props.id}`)}} className=" bg-white border border-blue-100 mt-2 p-2 shadow-[1px_1px_5px_rgb(180,195,205)]">
+    <div dir="ltr" onClick={()=>{navigate(`/job/${props.id}`)}} className="  bg-white border border-blue-100 mt-2 p-2 shadow-[1px_1px_5px_rgb(180,195,205)]">
         <div className="flex gap-2">
             <div>
                 <img alt="logo" src={props.src} className='size-20 '   
@@ -37,15 +36,15 @@ let navigate = useNavigate();
             <div className="w-full p-2">
                 <div className="text-[#2972e3] font-bold text-[1.1em]">{props.title}</div>
                 <div  className="text-gray-500 text-[0.8em]">{props.company}</div>
-                <div className='flex items-center '>
-                  <MdLocationPin   className='text-red-700'/>
+                <div className='flex items-center capitalize'>
+                  <MdLocationPin   className='text-red-700 '/>
                   {props.location}
                 </div>
-                <div className='flex items-center'>
+                <div className='flex items-center capitalize'>
                   <MdOutlineAttachMoney  className='text-green-500 size-4'/>
-                  {props.salary}
+                  {props.salary? props.salary.toLocaleString(): ""} a Year
                 </div>
-                <div className={styles.postDate}>{getPostDate(props.postDate)}</div>
+                <div className='text-[#d23388] text-end'>{getPostDate(props.postDate)}</div>
                 
             </div>
         </div>
