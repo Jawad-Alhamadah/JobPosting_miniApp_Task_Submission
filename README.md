@@ -11,19 +11,19 @@ To running the application locally, use npm run dev.
 Overview
 This is the homepage.
 
-![This is an alt text.](/public/demo1.png")
+![This is an alt text.](/public/demo1.png)
 
 To search, use the search bar on the right. You can use filters for location, salary range, and any search term of your choosing.
 
-![This is an alt text.](/public/demo2.png")
+![This is an alt text.](/public/demo2.png)
 
 To add a job, click the plus sign in the navigation bar.
 
-![This is an alt text.](/public/demo3.png")
+![This is an alt text.](/public/demo3.png)
 
 You can click on any job posting to learn more about the position.
 
-![This is an alt text.](/public/demo4.png")
+![This is an alt text.](/public/demo4.png)
 
 To go back, click the back arrow in the navigation bar.
 
