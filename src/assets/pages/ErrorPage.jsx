@@ -3,9 +3,9 @@ import { useRouteError } from "react-router-dom";
 import Navbar from '../components/Navbar';
 import { ScreenWidthContext } from '../components/ScreenWidthContext'
 function ErrorPage() {
-    const [width, setWidth] = React.useState(window.innerWidth);
+  const [width, setWidth] = React.useState(window.innerWidth);
 
-    React.useEffect(() => {
+  React.useEffect(() => {
     function handleResize() {
       setWidth(window.innerWidth);
     }
@@ -15,23 +15,23 @@ function ErrorPage() {
   }, []);
 
 
-  
+
   const error = useRouteError();
 
   return (
     <div>
       <ScreenWidthContext.Provider value={width}>
-      <Navbar></Navbar>
-      <div className='mt-15'>
-        <div className='text-center text-4xl text-pink-900'> Something went wrong...</div>
-        <p className='text-center mt-3 text-pink-800'>
-          {error.status ? <span>{error.status} Error: </span> : ""}
-          {error.statusText}
-          {error.message}
+        <Navbar></Navbar>
+        <div className='mt-15'>
+          <div className='text-center text-4xl text-primary'> Something went wrong...</div>
+          <p className='text-center mt-3 text-primary'>
+            {error.status ? <span>{error.status} Error: </span> : ""}
+            {error.statusText}
+            {error.message}
 
-        </p>
+          </p>
 
-      </div>
+        </div>
       </ScreenWidthContext.Provider>
     </div>
   )

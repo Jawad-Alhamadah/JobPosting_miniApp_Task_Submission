@@ -33,7 +33,7 @@ function Navbar() {
     if (width < 800) {
 
         return (
-            <div className='h-10 bg-pink-900 px-2 py-1 fixed bottom-0 w-full flex items-center justify-between'>
+            <div className='h-10 bg-primary px-2 py-1 fixed bottom-0 w-full flex items-center justify-between'>
                 <TbCircleArrowLeft className='text-white font-bold text-3xl ' onClick={navigateBack} />
                 {onHomePage ?
                     <FiPlusCircle
@@ -47,12 +47,12 @@ function Navbar() {
 
     // -----------------|Desktop|---------------------------------------------------------
     return (
-        <div className='h-10 bg-pink-900 px-2 py-1  top-0 flex items-center justify-between '>
+        <div className='h-10 bg-primary px-2 py-1  top-0 flex items-center justify-between mb-5'>
             <TbCircleArrowLeft className='text-white font-bold text-3xl ' onClick={navigateBack} />
             {onHomePage ?
-                    <FiPlusCircle
-                        className='text-white font-bold text-3xl '
-                        onClick={() => formContext.setIsDisplayAddForm(true)} /> : ""}
+                <FiPlusCircle
+                    className='text-white font-bold text-3xl '
+                    onClick={() => formContext.setIsDisplayAddForm(true)} /> : ""}
             <TiHome className='text-white font-bold text-3xl cursor-pointer ' onClick={navigateHome} />
         </div>
     )

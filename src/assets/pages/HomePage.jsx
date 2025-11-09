@@ -58,28 +58,34 @@ function HomePage() {
           <Navbar ></Navbar>
 
 
-          <div className='p-4 flex'>
 
-            <SearchBar setJobData={setJobData}></SearchBar>
-            <div className='flex w-[60%] ml-25'>
-              <div className='flex items-center'><GiArtificialHive className='text-pink-800 size-21' /></div>
-              <div className='text-[2.5em] text-pink-800 flex items-center'>Job Listing App</div>
-            </div>
-          </div>
 
           {/* <SearchFilters></SearchFilters> */}
 
           {isDisplayAddForm && <AddJobForm setJobData={setJobData}></AddJobForm>}
 
-          <div className='flex  '>
-            <div dir="rtl" className='w-[60%] p-1 overflow-y-scroll max-h-[500px] grid justify-items-center'>
-              {
-                jobData.map(job => <JobCard key={job.id} {...job} />)
-              }
+          <div className='flex '>
+
+            <UserProfile  name="Jawad Alhamadah" education="Kansas State University" skills={["React", "Vue", "NodeJs", "Javascript"]} title="Software Developer" ></UserProfile>
+            <SearchBar setJobData={setJobData}></SearchBar>
+            <div className='w-full'>
+              <div className=' flex w-full'>
+
+
+                <div className='flex w-[60%] ml-25'>
+                  <div className='flex items-center'><GiArtificialHive className='text-primary size-21' /></div>
+                  <div className='text-[2.5em] text-primary flex items-center'>Job Listing App</div>
+                </div>
+              </div>
+              <div className=' p-1 overflow-y-scroll max-h-[500px] grid justify-items-center mt-4'>
+                {
+                  jobData.map(job => <JobCard key={job.id} {...job} />)
+                }
+
+              </div>
 
             </div>
 
-            <UserProfile name="full name" education="Kansas State University" skills={["React","Vue","NodeJs","Javascript"]} title="title" ></UserProfile>
 
 
           </div>

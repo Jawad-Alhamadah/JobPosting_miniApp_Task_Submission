@@ -42,7 +42,7 @@ function SearchFilters(props) {
                 </div>
 
             </form>
-            {(Number(minSalaryRange) || Number(maxSalaryRange)) ? <IoCloseCircleSharp onClick={resetValues} className='me-auto m-1 text-red-500 size-5' /> : <div className='size-5 text-white'>.</div>}
+            {(Number(minSalaryRange) || Number(maxSalaryRange)) ? <IoCloseCircleSharp onClick={resetValues} className='ml-auto m-1 text-primary size-5' /> : <div className='size-5 text-white'>.</div>}
         </div>
     )
 }

@@ -17,8 +17,8 @@ function AddJobForm(props) {
         description: "",
         title: "",
         company: "",
-       
-        
+
+
     })
     let [showMissingErrorsObject, setShowMissingErrorsObject] = React.useState({
         location: false,
@@ -44,9 +44,9 @@ function AddJobForm(props) {
 
             if (!formInputs[key].trim()) {
                 noErrors = false
-               
+
                 errorsObject = { ...errorsObject, [key]: true }
-                 console.log(errorsObject)
+                console.log(errorsObject)
             }
 
 
@@ -56,10 +56,10 @@ function AddJobForm(props) {
         if (noErrors) {
             console.log("no errors")
             let today = new Date()
-            let dateString = `${today.getMonth()+1}/${today.getDate()}/${today.getFullYear()}`
+            let dateString = `${today.getMonth() + 1}/${today.getDate()}/${today.getFullYear()}`
             formContext.setIsDisplayAddForm(false)
             console.log(dateString)
-            props.setJobData(prev => ([...prev, {postDate:dateString, src: "/logos/default.svg", id: generateUID(), ...formInputs }]));
+            props.setJobData(prev => ([...prev, { postDate: dateString, src: "/logos/default.svg", id: generateUID(), ...formInputs }]));
         }
 
     }
@@ -75,10 +75,10 @@ function AddJobForm(props) {
                 </div>
 
                 <div className='z-10 bg-white w-[80%]  fixed left-[10%] top-[5%]  rounded-md '>
-                    <div className='text-center text-pink-800 text-lg '>
+                    <div className='text-center text-primary text-lg '>
                         <div className='flex justify-between'>
-                            <GiArtificialHive className='text-pink-800 size-10 p-1' />
-                            <RxCross2 className='mt-1 text-red-600' onClick={() => formContext.setIsDisplayAddForm(false)}></RxCross2>
+                            <GiArtificialHive className='text-primary size-10 p-1' />
+                            <RxCross2 className='mt-1 text-primary' onClick={() => formContext.setIsDisplayAddForm(false)}></RxCross2>
                         </div>
 
                         Post Job Form
@@ -179,10 +179,10 @@ function AddJobForm(props) {
 
             </div>
             <div className='z-10 bg-white w-[40%]  fixed left-[30%] top-[5%]  rounded-md '>
-                <div className='text-center text-pink-800 text-lg '>
+                <div className='text-center text-primary text-2xl '>
                     <div className='flex justify-between'>
-                        <GiArtificialHive className='text-pink-800 size-10 p-1' />
-                        <RxCross2 className='mt-1 text-red-600' onClick={() => formContext.setIsDisplayAddForm(false)}></RxCross2>
+                        <GiArtificialHive className='text-primary size-10 p-1' />
+                        <RxCross2 className='mt-1 text-primary' onClick={() => formContext.setIsDisplayAddForm(false)}></RxCross2>
                     </div>
 
                     Post Job Form

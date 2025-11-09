@@ -53,7 +53,7 @@ function JobPostingPage() {
               <div className="flex justify-evenly mt-2 border-b border-b-gray-300 pb-3">
                 <div className="flex justify-center items-center ">
                   <MdLocationPin className='text-red-700' />
-                  <div>{job.location}</div>
+                  <div className='capitalize'>{job.location}</div>
                 </div>
                 <div className="flex justify-center items-center ">
                   <MdOutlineAttachMoney className='text-green-500 size-4' />
@@ -102,7 +102,7 @@ function JobPostingPage() {
     <div>
       <ScreenWidthContext.Provider value={width}>
         <Navbar></Navbar>
-        <div className="flex justify-center w-full p-9  rounded-md ">
+        <div className="flex justify-center w-full p-9  rounded-md gap-4">
 
 
           <div className="bg-white w-[92%] items-center p-5 shadow-2xl shadow-black-300 ">
@@ -121,7 +121,7 @@ function JobPostingPage() {
                 <div className="flex gap-4">
                   <div className="flex justify-center items-center ">
                     <MdLocationPin className='text-red-700' />
-                    <div>{job.location}</div>
+                    <div className='capitalize'>{job.location}</div>
                   </div>
                   <div className="flex justify-center items-center ">
                     <MdOutlineAttachMoney className='text-green-500 size-4' />
@@ -132,7 +132,7 @@ function JobPostingPage() {
               </div>
               <div>
                 <img src="/QR.png" className="size-[84px]"></img>
-                <div className="text-center font-bold text-pink-700">Share</div>
+                <div className="text-center font-bold text-primary">Share</div>
               </div>
 
             </div>
@@ -163,7 +163,7 @@ function JobPostingPage() {
 
           </div>
           {/* here */}
-          <UserProfile name="full name" education="Kansas State University" skills={["React","Vue","NodeJs","Javascript"]} title="title" ></UserProfile>
+          <UserProfile  name="Jawad Alhamadah" education="Kansas State University" skills={["React", "Vue", "NodeJs", "Javascript"]} title="Software Developer" ></UserProfile>
 
         </div>
         <Footer></Footer>

@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: oklch(0.5841 0.1253 229.34); /* this is Tailwind's pink-800 converted to OKLCH */
+}

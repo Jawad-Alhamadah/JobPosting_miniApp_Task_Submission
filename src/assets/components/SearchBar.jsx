@@ -4,9 +4,13 @@ import { GrLocation } from "react-icons/gr";
 import { VscClose } from "react-icons/vsc";
 import SearchFilters from './SearchFilters';
 import { ScreenWidthContext } from './ScreenWidthContext';
+import { FaChevronLeft } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
+
 function SearchBar(props) {
     let [searchInputValue, setSearchInputValue] = React.useState("")
     let [location, setLocation] = React.useState("")
+    let [expanded, setExpanded] = React.useState(true)
     const minMaxRef = React.useRef(null);
 
     const width = React.useContext(ScreenWidthContext);
@@ -116,36 +120,53 @@ function SearchBar(props) {
 
     return (
         <div >
-            <div className='w-full grid justify-start  space-x-4 '>
 
-                <div className=' bg-white pt-3 px-4 rounded-lg ring-1 ring-pink-800'>
 
-                    
+            <div className={` transition-transform duration-300 flex  fixed  top-12 right-0 ${expanded ? "translate-x-0" : "translate-x-[83%]"} `}>
+                {expanded ?
+                    <FaChevronRight onClick={() => setExpanded(false)} className='bg-primary size-auto text-white ring-1 ring-primary px-4 rounded-l-2xl'></ FaChevronRight >
+                    :
+                    <FaChevronLeft onClick={() => setExpanded(true)} className='bg-primary size-auto text-white ring-1 ring-primary px-4 rounded-l-2xl'></FaChevronLeft >
+                }
 
-                    <div className='flex gap-2'>
-                        <div className=' flex w-[70%] rounded-l-3xl outline bg-black '>
-                            <button className=' text-white p-1'>
-                                <HiOutlineSearch className='size-5 '
-                                    onClick={() => search(searchInputValue, location)}
-                                />
-                            </button>
-                            <input placeholder="search" onChange={onChangeSearch} value={searchInputValue} className='pl-1  bg-white w-[90%]'>
+                <div className=' bg-white pt-3 px-4 ring-1 ring-primary'>
 
-                            </input>
-                            <VscClose onClick={() => setSearchInputValue("")} className='bg-white size-4 h-auto' />
+                    <div className=' gap-2'>
+
+                        <div className='flex gap-2 '>
+                            <div>
+                                <div className=' flex  rounded-l-3xl outline bg-black '>
+                                    <button className=' text-white p-1'>
+                                        <HiOutlineSearch className='size-5 '
+                                            onClick={() => search(searchInputValue, location)}
+                                        />
+                                    </button>
+                                    <input placeholder="search" onChange={onChangeSearch} value={searchInputValue} className='pl-1  bg-white w-[90%]'>
+
+                                    </input>
+                                    <VscClose onClick={() => setSearchInputValue("")} className='bg-white size-4 h-auto' />
+                                </div>
+                                <div className=' flex  rounded-l-3xl outline bg-black   '>
+                                    <button className=' text-white p-1'>
+                                        <GrLocation className='size-5 '
+                                            onClick={() => search(searchInputValue, location)}
+                                        />
+
+                                    </button>
+                                    <input placeholder="location" onChange={onChangeLocation} value={location} className='pl-1  bg-white  w-[90%]'></input>
+                                    <VscClose onClick={() => setLocation("")} className='bg-white size-4 h-auto' />
+                                </div>
+                            </div>
+                            <div>
+                                <SearchFilters getMinMax={getMinMax}></SearchFilters>
+                            </div>
                         </div>
-                        <div className=' flex  rounded-l-3xl outline bg-black   '>
-                            <button className=' text-white p-1'>
-                                <GrLocation className='size-5 '
-                                    onClick={() => search(searchInputValue, location)}
-                                />
 
-                            </button>
-                            <input placeholder="location" onChange={onChangeLocation} value={location} className='pl-1  bg-white  w-[90%]'></input>
-                            <VscClose onClick={() => setLocation("")} className='bg-white size-4 h-auto' />
-                        </div>
+
+
+
                     </div>
-                    <SearchFilters getMinMax={getMinMax}></SearchFilters>
+
                 </div>
 
             </div>
