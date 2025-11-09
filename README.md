@@ -8,7 +8,7 @@ Start by cloning the project using git clone.
 To install, use npm install.
 To running the application locally, use npm run dev.
 
-Overview
+## Overview
 This is the homepage.
 
 ![This is an alt text.](/public/demo1.png)
