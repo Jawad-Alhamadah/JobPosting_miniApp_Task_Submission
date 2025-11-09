@@ -16,7 +16,9 @@ function AddJobForm(props) {
         salary: "",
         description: "",
         title: "",
-        company: ""
+        company: "",
+       
+        
     })
     let [showMissingErrorsObject, setShowMissingErrorsObject] = React.useState({
         location: false,
@@ -42,7 +44,9 @@ function AddJobForm(props) {
 
             if (!formInputs[key].trim()) {
                 noErrors = false
+               
                 errorsObject = { ...errorsObject, [key]: true }
+                 console.log(errorsObject)
             }
 
 
@@ -50,9 +54,12 @@ function AddJobForm(props) {
         setShowMissingErrorsObject(errorsObject)
 
         if (noErrors) {
-
+            console.log("no errors")
+            let today = new Date()
+            let dateString = `${today.getMonth()+1}/${today.getDate()}/${today.getFullYear()}`
             formContext.setIsDisplayAddForm(false)
-            props.setJobData(prev => ([...prev, { src: "/logos/default.svg", id: generateUID(), ...formInputs }]));
+            console.log(dateString)
+            props.setJobData(prev => ([...prev, {postDate:dateString, src: "/logos/default.svg", id: generateUID(), ...formInputs }]));
         }
 
     }
@@ -96,7 +103,7 @@ function AddJobForm(props) {
                         />
 
                         <div className='flex justify-between items-center'>
-                            <label className="font-medium text-[0.9em]">Salary</label>
+                            <label className="font-medium text-[0.9em]">Yearly salary</label>
                             {showMissingErrorsObject.salary && (
                                 <span className='text-red-600 text-[0.7em]'>Missing field</span>
                             )}
@@ -198,7 +205,7 @@ function AddJobForm(props) {
                         onFocus={() => setShowMissingErrorsObject(prev => ({ ...prev, title: false }))}
                     />
                     <div className='flex justify-between items-center'>
-                        <label className="font-medium text-[0.9em]">Salary</label>
+                        <label className="font-medium text-[0.9em]">Yearly salary</label>
                         {showMissingErrorsObject.salary && (
                             <span className='text-red-600 text-[0.7em]'>Missing field</span>
                         )}

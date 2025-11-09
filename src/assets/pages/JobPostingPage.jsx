@@ -29,7 +29,9 @@ function JobPostingPage() {
       .then(data => {
         let jobData = data.filter(job => job.id === params.id)
         setJob(jobData[0])
+        
       })
+      .catch(err=>console.log(err)) 
   }, [])
 
 

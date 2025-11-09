@@ -26,7 +26,7 @@ function SearchFilters(props) {
     }, [minSalaryRange, maxSalaryRange])
     return (
         <div className='bg-white '>
-            <form className='space-x-5 p-2'>
+            <form className='space-x-5 pt-2'>
 
                 <div>Salary Range: </div>
                 <div className='flex items-center gap-2'>

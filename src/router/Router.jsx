@@ -2,7 +2,7 @@ import React from 'react'
 import * as ReactDOM from "react-dom/client";
 import JobPostingPage from '../assets/pages/JobPostingPage';
 import Home from '../assets/pages/HomePage';
-
+import ErrorPage from '../assets/pages/ErrorPage';
 import {
     createBrowserRouter,
     RouterProvider,
@@ -12,12 +12,17 @@ import {
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Home/>
+        element: <Home/>,
+        errorElement: <ErrorPage />,
     },
 
     {
         path:"/Job/:id",
-        element: <JobPostingPage/>
+        element: <JobPostingPage/>,
+        errorElement: <ErrorPage />
+    }
+    ,{
+       
     }
 ]);
 

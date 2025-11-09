@@ -3,7 +3,7 @@ import { HiMiniUserCircle } from "react-icons/hi2";
 function UserProfile(props) {
     return (
         <div className="w-[35%] ml-5 bg-white rounded-lg  space-2 max-h-[500px] sticky top-5 mt-2 ring-1 ring-pink-100">
-            <div className="border-b border-b-gray-300 flex pb-3 bg-pink-900 py-4 px-6 rounded-t-lg">
+            <div className="border-b border-b-gray-300 flex pb-3 bg-pink-800 py-4 px-6 rounded-t-lg">
                 <HiMiniUserCircle className="size-14 text-white" />
                 <div>
                     <div className="text-2xl text-white">{props.name}</div>

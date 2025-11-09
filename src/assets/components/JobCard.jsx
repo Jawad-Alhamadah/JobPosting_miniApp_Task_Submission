@@ -23,7 +23,7 @@ let navigate = useNavigate();
 
   }
   return (
-    <div dir="ltr" onClick={()=>{navigate(`/job/${props.id}`)}} className="  bg-white border border-blue-100 mt-2 p-2 shadow-[1px_1px_5px_rgb(180,195,205)]">
+    <div dir="ltr" onClick={()=>{navigate(`/job/${props.id}`)}} className="hover:scale-[101%] w-[98%] rounded-md hover:ring-2 hover:ring-pink-600 bg-white border border-blue-100 mt-2 p-2 shadow-[1px_1px_5px_rgb(180,195,205)]">
         <div className="flex gap-2">
             <div>
                 <img alt="logo" src={props.src} className='size-20 '   

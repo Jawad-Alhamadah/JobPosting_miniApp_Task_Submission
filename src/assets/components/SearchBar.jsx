@@ -116,14 +116,14 @@ function SearchBar(props) {
 
     return (
         <div >
-            <div className='w-full p-2 grid justify-start  space-x-4 '>
+            <div className='w-full grid justify-start  space-x-4 '>
 
-                <div className=' bg-white p-2 rounded-lg ring-1 ring-pink-800'>
+                <div className=' bg-white pt-3 px-4 rounded-lg ring-1 ring-pink-800'>
 
-                    <SearchFilters getMinMax={getMinMax}></SearchFilters>
+                    
 
-                    <div >
-                        <div className=' flex w-full rounded-l-3xl outline bg-black'>
+                    <div className='flex gap-2'>
+                        <div className=' flex w-[70%] rounded-l-3xl outline bg-black '>
                             <button className=' text-white p-1'>
                                 <HiOutlineSearch className='size-5 '
                                     onClick={() => search(searchInputValue, location)}
@@ -134,7 +134,7 @@ function SearchBar(props) {
                             </input>
                             <VscClose onClick={() => setSearchInputValue("")} className='bg-white size-4 h-auto' />
                         </div>
-                        <div className=' flex w-full rounded-l-3xl outline bg-black mt-1 '>
+                        <div className=' flex  rounded-l-3xl outline bg-black   '>
                             <button className=' text-white p-1'>
                                 <GrLocation className='size-5 '
                                     onClick={() => search(searchInputValue, location)}
@@ -145,6 +145,7 @@ function SearchBar(props) {
                             <VscClose onClick={() => setLocation("")} className='bg-white size-4 h-auto' />
                         </div>
                     </div>
+                    <SearchFilters getMinMax={getMinMax}></SearchFilters>
                 </div>
 
             </div>

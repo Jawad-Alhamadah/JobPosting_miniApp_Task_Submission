@@ -61,9 +61,9 @@ function HomePage() {
           <div className='p-4 flex'>
 
             <SearchBar setJobData={setJobData}></SearchBar>
-            <div className='flex justify-center w-[60%]'>
-              <div className='flex items-center'><GiArtificialHive className='text-pink-800 size-23' /></div>
-              <div className='text-[2.8em] text-pink-800 flex items-center'>Job Listing App</div>
+            <div className='flex w-[60%] ml-25'>
+              <div className='flex items-center'><GiArtificialHive className='text-pink-800 size-21' /></div>
+              <div className='text-[2.5em] text-pink-800 flex items-center'>Job Listing App</div>
             </div>
           </div>
 
@@ -71,8 +71,8 @@ function HomePage() {
 
           {isDisplayAddForm && <AddJobForm setJobData={setJobData}></AddJobForm>}
 
-          <div className='flex p-4 '>
-            <div dir="rtl" className='w-[60%] overflow-y-scroll max-h-[500px] '>
+          <div className='flex  '>
+            <div dir="rtl" className='w-[60%] p-1 overflow-y-scroll max-h-[500px] grid justify-items-center'>
               {
                 jobData.map(job => <JobCard key={job.id} {...job} />)
               }
